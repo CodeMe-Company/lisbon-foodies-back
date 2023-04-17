@@ -18,7 +18,7 @@ app.get("/restaurant-list", (req, res) => {
       options
     )
     .then((response) => {
-      res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+      res.header("Access-Control-Allow-Origin", "https://lisbon-foodies.netlify.app");
       res.send(response.data);
     })
     .catch((error) => console.error(error));
@@ -38,7 +38,7 @@ app.get("/restaurant-details/:id", (req, res) => {
   axios
     .get(`https://api.yelp.com/v3/businesses/${id}`, options)
     .then((response) => {
-      res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+      res.header("Access-Control-Allow-Origin", "https://lisbon-foodies.netlify.app");
       res.send(response.data);
     })
     .catch((error) => console.error(error));
@@ -62,7 +62,7 @@ app.get("/restaurant-reviews/:id", (req, res) => {
       options
     )
     .then((response) => {
-        res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+        res.header("Access-Control-Allow-Origin", "https://lisbon-foodies.netlify.app");
         console.log(response.data.reviews)
         res.send(response.data.reviews);
       })
@@ -90,7 +90,7 @@ app.get("/event-list", (req, res) => {
       options
     )
     .then((response) => {
-      res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+      res.header("Access-Control-Allow-Origin", "https://lisbon-foodies.netlify.app");
       res.send(response.data.events);
     })
     .catch((error) => console.error(error));
